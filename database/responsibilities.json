@@ -1,0 +1,44 @@
+[
+  {
+      "_id": "6381735fe8c8f4f844d4ab47",
+      "description": "To uphold the principles and objectives of PANAFSTRAG and conform with the code of ethics at all times.",
+      "createdAt": "2022-11-26T02:01:03.312Z",
+      "updatedAt": "2023-01-03T02:20:03.099Z",
+      "__v": 0
+  },
+  {
+      "_id": "63817367e8c8f4f844d4ab4b",
+      "description": "Not to engage in any activity or conduct that will bring the Organisation and/or its members to disrepute.",
+      "createdAt": "2022-11-26T02:01:11.641Z",
+      "updatedAt": "2022-11-26T02:01:11.641Z",
+      "__v": 0
+  },
+  {
+      "_id": "6381736de8c8f4f844d4ab4f",
+      "description": "Not to enter into an arrangement, contract or agreement with any persons or Organizations on behalf of the Organization without the authority of the Cell Leader/ Language Group Leaders/ Team Board Members as the case may be.",
+      "createdAt": "2022-11-26T02:01:17.236Z",
+      "updatedAt": "2022-11-26T02:01:17.236Z",
+      "__v": 0
+  },
+  {
+      "_id": "63817373e8c8f4f844d4ab53",
+      "description": "Not to use the name or resource of the Organisation for private gain.",
+      "createdAt": "2022-11-26T02:01:23.842Z",
+      "updatedAt": "2022-11-26T02:01:23.842Z",
+      "__v": 0
+  },
+  {
+      "_id": "63817378e8c8f4f844d4ab57",
+      "description": "To be willing to volunteer skills, profession or service in furtherance of the objectives of the Organisation.",
+      "createdAt": "2022-11-26T02:01:28.121Z",
+      "updatedAt": "2022-11-26T02:01:28.121Z",
+      "__v": 0
+  },
+  {
+      "_id": "6381737de8c8f4f844d4ab5b",
+      "description": "To promptly declare any conflict of interest or membership disqualification factor to the Cell Leader/ Language Group Leaders/ Team Board Members as the case may be.",
+      "createdAt": "2022-11-26T02:01:33.545Z",
+      "updatedAt": "2022-11-26T02:01:33.545Z",
+      "__v": 0
+  }
+]
