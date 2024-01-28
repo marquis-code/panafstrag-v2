@@ -1,11 +1,16 @@
 <template>
   <main>
-    <hero-section />
-    <intro-section />
-    <our-objectives />
-    <team-section />
+    <updated-hero-section />
+    <updated-content-section />
+    <updated-objective-section />
+    <updated-team-section />
+    <!-- <hero-section /> -->
+    <!-- <intro-section /> -->
+    <!-- <our-objectives /> -->
+    <!-- <team-section /> -->
     <event-section />
-    <contact-us />
+    <updated-contact-section />
+    <!-- <contact-us /> -->
     <!-- <section class="lg:flex justify-between items-center">
       <div class="lg:w-6/12 pt-6 lg:pt-20 h-[300px]  bg-pink-600 text-white space-y-3 lg:px-20 px-10">
         <p class="font-serif">Subscribe</p>
@@ -33,24 +38,34 @@
 </template>
 
 <script>
-import TeamSection from '@/components/BoardMembers/TeamSection.vue'
-import OurObjectives from '@/components/Objectives/ObjectivesList.vue'
-import EventSection from '@/components/Events/HeroEventSection.vue'
+import TeamSection from "@/components/BoardMembers/TeamSection.vue";
+import OurObjectives from "@/components/Objectives/ObjectivesList.vue";
+import EventSection from "@/components/Events/HeroEventSection.vue";
+import UpdatedHeroSection from "@/components/UpdatedHeroSection.vue";
+import UpdatedContentSection from "@/components/UpdatedContentSection.vue";
+import UpdatedObjectiveSection from "@/components/UpdatedObjectiveSection.vue";
+import UpdatedTeamSection from "@/components/UpdatedTeamSection.vue";
+import UpdatedContactSection from "@/components/UpdatedContactSection.vue";
 export default {
   head: {
-    title: 'Home page',
+    title: "Home page",
     meta: [
       {
-        hid: 'description',
-        name: 'description',
-        content: 'PANAFSTRAG Official website'
-      }
+        hid: "description",
+        name: "description",
+        content: "PANAFSTRAG Official website",
+      },
     ],
   },
   components: {
     TeamSection,
     OurObjectives,
-    EventSection
-  }
-}
+    EventSection,
+    UpdatedHeroSection,
+    UpdatedContentSection,
+    UpdatedObjectiveSection,
+    UpdatedTeamSection,
+    UpdatedContactSection,
+  },
+};
 </script>

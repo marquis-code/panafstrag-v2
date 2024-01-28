@@ -122,6 +122,7 @@ export default {
       src: "~/plugins/tawk-messenger.client.js",
       mode: "client",
     },
+    '~/plugins/click-outside.js'
     // {
     //   src: '~/plugins/vue-video-background',
     //   ssr: false
