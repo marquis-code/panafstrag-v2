@@ -1,54 +1,132 @@
 <template>
   <section class="text-gray-600 body-font overflow-hidden">
-    <section
-      class="overflow-hidden bg-[url('~/assets/images/programme.jpeg')] bg-cover bg-top bg-no-repeat">
-      <div class="bg-black/25 p-8 md:p-12 lg:px-16 lg:py-24">
-        <div class="text-center ltr:sm:text-left rtl:sm:text-right">
-          <div class="flex flex-wrap w-full mb-20 justify-center items-center flex-col">
-            <div class="lg:w-1/2 w-full mb-6 lg:mb-0 flex justify-center items-center flex-col gap-y-3">
-              <h1 class="sm:text-3xl text-3xl font-medium title-font mb-2 text-white">PANAFSTRAG Programmes</h1>
-              <div class="h-1 w-20 bg-indigo-500 rounded"></div>
-            </div>
-          </div>
-        </div>
+    <div
+      class="relative isolate overflow-hidden bg-gray-900 px-6 py-24 sm:py-32 lg:px-8"
+    >
+      <img
+        src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-y=.8&w=2830&h=1500&q=80&blend=111827&sat=-100&exp=15&blend-mode=multiply"
+        alt=""
+        class="absolute inset-0 -z-10 h-full w-full object-cover"
+      />
+      <div
+        class="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl"
+        aria-hidden="true"
+      >
+        <div
+          class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-20"
+          style="
+            clip-path: polygon(
+              74.1% 44.1%,
+              100% 61.6%,
+              97.5% 26.9%,
+              85.5% 0.1%,
+              80.7% 2%,
+              72.5% 32.5%,
+              60.2% 62.4%,
+              52.4% 68.1%,
+              47.5% 58.3%,
+              45.2% 34.5%,
+              27.5% 76.7%,
+              0.1% 64.9%,
+              17.9% 100%,
+              27.6% 76.8%,
+              76.1% 97.7%,
+              74.1% 44.1%
+            );
+          "
+        ></div>
       </div>
-    </section>
+      <div
+        class="absolute -top-52 left-1/2 -z-10 -translate-x-1/2 transform-gpu blur-3xl sm:top-[-28rem] sm:ml-16 sm:translate-x-0 sm:transform-gpu"
+        aria-hidden="true"
+      >
+        <div
+          class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-20"
+          style="
+            clip-path: polygon(
+              74.1% 44.1%,
+              100% 61.6%,
+              97.5% 26.9%,
+              85.5% 0.1%,
+              80.7% 2%,
+              72.5% 32.5%,
+              60.2% 62.4%,
+              52.4% 68.1%,
+              47.5% 58.3%,
+              45.2% 34.5%,
+              27.5% 76.7%,
+              0.1% 64.9%,
+              17.9% 100%,
+              27.6% 76.8%,
+              76.1% 97.7%,
+              74.1% 44.1%
+            );
+          "
+        ></div>
+      </div>
+      <div class="mx-auto max-w-2xl text-center">
+        <h2 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">
+          PANAFSTRAG Programmes
+        </h2>
+        <p class="mt-6 text-lg leading-8 text-gray-300">
+          Explore our programmes
+        </p>
+      </div>
+    </div>
     <div class="container px-5 py-24 mx-auto">
       <div class="flex flex-wrap w-full mb-20">
         <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
-          <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">PANAFSTRAG Programmes</h1>
+          <h1
+            class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900"
+          >
+            PANAFSTRAG Programmes
+          </h1>
           <div class="h-1 w-20 bg-indigo-500 rounded"></div>
         </div>
       </div>
+      <!-- <div class="flex flex-wrap -m-12">
+        <ActiveProgrammes
+          v-for="program in activeProgrammes"
+          :key="program._id"
+          :program="program"
+        />
+      </div> -->
       <div class="flex flex-wrap -m-12">
-        <ActiveProgrammes v-for="program in activeProgrammes" :key="program._id" :program="program" />
+        <PendingProgrammes
+          v-for="program in pendingProgrammes"
+          :key="program._id"
+          :program="program"
+        />
       </div>
       <div class="flex flex-wrap -m-12">
-        <PendingProgrammes v-for="program in pendingProgrammes" :key="program._id" :program="program" />
-      </div>
-      <div class="flex flex-wrap -m-12">
-        <CompletedProgrammes v-for="program in completedProgrammes" :key="program._id" :program="program" />
+        <CompletedProgrammes
+          v-for="program in completedProgrammes"
+          :key="program._id"
+          :program="program"
+        />
       </div>
     </div>
   </section>
 </template>
 
 <script>
-import ActiveProgrammes from '@/components/Programmes/Active.vue'
-import PendingProgrammes from '@/components/Programmes/Pending.vue'
-import CompletedProgrammes from '@/components/Programmes/Completed.vue'
-import community_programmes from '@/database/programmes.json'
+import ActiveProgrammes from "@/components/Programmes/Active.vue";
+import PendingProgrammes from "@/components/Programmes/Pending.vue";
+import CompletedProgrammes from "@/components/Programmes/Completed.vue";
+// import community_programmes from '@/database/programmes.json'
 import _ from "lodash";
 export default {
   name: "programme",
   scrollToTop: true,
   components: {
-    ActiveProgrammes, PendingProgrammes, CompletedProgrammes
+    ActiveProgrammes,
+    PendingProgrammes,
+    CompletedProgrammes,
   },
   data() {
     return {
       isOpen: true,
-      programmes: community_programmes,
+      programmes: null,
       url: "https://panafstrag.onrender.com/api/panAfrica/programmes",
       starting_date: null,
       ending_date: null,
@@ -61,7 +139,7 @@ export default {
   },
   head() {
     return {
-      title: 'PANAFSTRAG Programmes',
+      title: "PANAFSTRAG Programmes",
       meta: [
         {
           hid: "twitter:title",
@@ -144,7 +222,7 @@ export default {
   },
   computed: {
     recentProgrammes() {
-      return this.programmes.filter((p) => {
+      return this.programmes?.filter((p) => {
         this.starting_date = p?.startDate;
         this.ending_date = p?.endDate;
         let endDate = this.$moment(p.endDate)
@@ -157,20 +235,28 @@ export default {
       });
     },
     pendingProgrammes() {
-      return this.programmes.filter((p) => {
+      return this.programmes?.filter((p) => {
         return p.status === "pending";
       });
     },
     completedProgrammes() {
-      return this.programmes.filter((p) => {
+      return this.programmes?.filter((p) => {
         return p.status === "completed";
       });
     },
     activeProgrammes() {
-      return this.programmes.filter((p) => {
+      return this.programmes?.filter((p) => {
         return p.status === "active";
       });
     },
-  }
+  },
+  async mounted() {
+    try {
+      const response = await this.$axios.get("/data/programmes.json");
+      this.programmes = response.data;
+    } catch (error) {
+      console.error("Error fetching JSON data:", error);
+    }
+  },
 };
 </script>

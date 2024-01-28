@@ -46,15 +46,6 @@
             class="text-sm font-semibold leading-6 text-white"
             >{{ itm.name }}</nuxt-link
           >
-          <!-- <a href="#" class="text-sm font-semibold leading-6 text-white"
-            >Features</a
-          >
-          <a href="#" class="text-sm font-semibold leading-6 text-white"
-            >Marketplace</a
-          >
-          <a href="#" class="text-sm font-semibold leading-6 text-white"
-            >Company</a
-          > -->
         </div>
         <div class="hidden lg:flex lg:flex-1 lg:justify-end">
           <a href="#" class="text-sm font-semibold leading-6 text-white"
@@ -131,11 +122,6 @@
     </header>
 
     <div class="relative isolate overflow-hidden pt-14">
-      <!-- <img
-        src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2830&q=80&blend=111827&sat=-100&exp=15&blend-mode=multiply"
-        alt=""
-        class="absolute inset-0 -z-10 h-full w-full object-cover"
-      /> -->
       <div
         class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
         aria-hidden="true"

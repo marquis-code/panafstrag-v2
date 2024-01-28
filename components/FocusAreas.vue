@@ -1,28 +1,97 @@
 <template>
   <section class="text-gray-600 body-font">
-    <section
-      class="overflow-hidden bg-[url('~/assets/images/archived.jpeg')] bg-cover bg-top bg-no-repeat">
-      <div class="bg-black/25 p-8 md:p-12 lg:px-16 lg:py-24">
-        <div class="text-center ltr:sm:text-left rtl:sm:text-right">
-          <div class="flex flex-wrap w-full mb-20 justify-center items-center flex-col">
-            <div class="lg:w-1/2 w-full mb-6 lg:mb-0 flex justify-center items-center flex-col gap-y-3">
-              <h1 class="sm:text-3xl text-3xl font-medium title-font mb-2 text-white">FOCUS AREAS</h1>
-              <div class="h-1 w-20 bg-indigo-500 rounded"></div>
-            </div>
-          </div>
-        </div>
+    <div
+      class="relative isolate overflow-hidden bg-gray-900 px-6 py-24 sm:py-32 lg:px-8"
+    >
+      <img
+        src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-y=.8&w=2830&h=1500&q=80&blend=111827&sat=-100&exp=15&blend-mode=multiply"
+        alt=""
+        class="absolute inset-0 -z-10 h-full w-full object-cover"
+      />
+      <div
+        class="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl"
+        aria-hidden="true"
+      >
+        <div
+          class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-20"
+          style="
+            clip-path: polygon(
+              74.1% 44.1%,
+              100% 61.6%,
+              97.5% 26.9%,
+              85.5% 0.1%,
+              80.7% 2%,
+              72.5% 32.5%,
+              60.2% 62.4%,
+              52.4% 68.1%,
+              47.5% 58.3%,
+              45.2% 34.5%,
+              27.5% 76.7%,
+              0.1% 64.9%,
+              17.9% 100%,
+              27.6% 76.8%,
+              76.1% 97.7%,
+              74.1% 44.1%
+            );
+          "
+        ></div>
       </div>
-    </section>
+      <div
+        class="absolute -top-52 left-1/2 -z-10 -translate-x-1/2 transform-gpu blur-3xl sm:top-[-28rem] sm:ml-16 sm:translate-x-0 sm:transform-gpu"
+        aria-hidden="true"
+      >
+        <div
+          class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-20"
+          style="
+            clip-path: polygon(
+              74.1% 44.1%,
+              100% 61.6%,
+              97.5% 26.9%,
+              85.5% 0.1%,
+              80.7% 2%,
+              72.5% 32.5%,
+              60.2% 62.4%,
+              52.4% 68.1%,
+              47.5% 58.3%,
+              45.2% 34.5%,
+              27.5% 76.7%,
+              0.1% 64.9%,
+              17.9% 100%,
+              27.6% 76.8%,
+              76.1% 97.7%,
+              74.1% 44.1%
+            );
+          "
+        ></div>
+      </div>
+      <div class="mx-auto max-w-2xl text-center">
+        <h2 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">
+          Focus Areas
+        </h2>
+        <p class="mt-6 text-lg leading-8 text-gray-300">
+          Explore our focus areas
+        </p>
+      </div>
+    </div>
     <div class="container px-5 py-24 mx-auto">
       <div class="flex flex-wrap -m-4">
         <div class="p-4 md:w-1/3" v-for="(itm, idx) in focusAreas" :key="idx">
-          <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
-            <img class="lg:h-48 md:h-36 w-full object-cover object-center" :src="require(`@/assets/images/${itm.imgUrl}`)"
-              alt="blog">
+          <div
+            class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden"
+          >
+            <img
+              class="lg:h-48 md:h-36 w-full object-cover object-center"
+              :src="require(`@/assets/images/${itm.imgUrl}`)"
+              alt="blog"
+            />
             <div class="p-6">
               <!-- <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">{{ itm.title }}</h2> -->
-              <h1 class="title-font text-lg font-medium text-gray-900 mb-3">{{ itm.title }}</h1>
-              <p class="leading-relaxed mb-3">Panafstrag focuses on {{ itm.title }}</p>
+              <h1 class="title-font text-lg font-medium text-gray-900 mb-3">
+                {{ itm.title }}
+              </h1>
+              <p class="leading-relaxed mb-3">
+                Panafstrag focuses on {{ itm.title }}
+              </p>
               <!-- <div class="flex items-center flex-wrap ">
                 <a class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">Learn More
                   <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -56,33 +125,33 @@ export default {
     return {
       focusAreas: [
         {
-          title: 'Africa & Diaspora History & Culture',
-          imgUrl: 'area1.jpg'
+          title: "Africa & Diaspora History & Culture",
+          imgUrl: "area1.jpg",
         },
         {
-          title: 'Human Security (Freedom from want & Freedom from fear)',
-          imgUrl: 'area2.jpg'
+          title: "Human Security (Freedom from want & Freedom from fear)",
+          imgUrl: "area2.jpg",
         },
         {
-          title: 'Technology and Entrepreneurship',
-          imgUrl: 'area3.jpg'
+          title: "Technology and Entrepreneurship",
+          imgUrl: "area3.jpg",
         },
         {
-          title: 'Integration-National, Regional, Continental & Diaspora',
-          imgUrl: 'area4.jpg'
+          title: "Integration-National, Regional, Continental & Diaspora",
+          imgUrl: "area4.jpg",
         },
         {
-          title: 'Synergy with the Diaspora',
-          imgUrl: 'area5.jpg'
+          title: "Synergy with the Diaspora",
+          imgUrl: "area5.jpg",
         },
         {
-          title: 'Climate Change and the impact on Human Security',
-          imgUrl: 'area6.jpg'
-        }
-      ]
-    }
-  }
-}
+          title: "Climate Change and the impact on Human Security",
+          imgUrl: "area6.jpg",
+        },
+      ],
+    };
+  },
+};
 </script>
 
 <style></style>

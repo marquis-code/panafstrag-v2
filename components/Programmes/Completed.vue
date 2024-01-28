@@ -1,7 +1,7 @@
 <template>
   <div class="p-12 md:w-1/2 flex flex-col items-start">
     <span class="inline-block py-1 px-2 rounded bg-black text-white text-xs font-medium tracking-widest">COMPLETED</span>
-    <h2 class="sm:text-3xl text-2xl title-font font-medium text-gray-900 mt-4 mb-4"> {{
+    <h2 class="md:text-3xl text-xl title-font font-medium text-gray-900 mt-4 mb-4"> {{
       program.title && program.title.length > 100
       ? program.title.slice(0, 100) + "..."
       : program.title
